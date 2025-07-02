@@ -255,7 +255,7 @@
                           </li>
                           <li>
                             <p><code>detail[0][i].char[j].pos</code>
-                            <pre>String</pre>
+                            <pre>Array[Integer]</pre>
                             </p>
                             <p>单字坐标，以图片左上角为原点，认为是一个矩形</p>
                             <p>[左，上，右，下]</p>
