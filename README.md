@@ -4,7 +4,7 @@
 
 本程序能够从书法作品数据中快速检索出现了你需要汉字的书法作品。
 
-![interface1](assets\interface1.png)
+![interface1](assets\interface1.webp)
 
 ## 安装说明
 
