@@ -1,0 +1,5 @@
+urllib3>=2.0
+flask
+flask_caching
+flask_cors
+flask_compress

@@ -1,0 +1,292 @@
+@font-face {
+    font-style: normal;
+    font-family: 'title';
+    src: local('STZhongs');
+}
+
+@font-face {
+    font-style: normal;
+    font-family: 'default';
+    src: local('宋体'), local('Simsun');
+}
+
+@font-face {
+    font-family: 'render';
+    src: local('Simhei'), local("Simsun");
+}
+
+:root {
+    --render: 'Times New Roman', render;
+    --pku-red: rgb(139, 0, 22);
+    --pku-light: rgb(154, 1, 0);
+    --pku-dark: rgb(82, 0, 12);
+    --foot-height: 2em;
+    --head-height: 3em;
+    font-size: 1.5vw;
+    font-family: var(--font);
+    --font: 华文中宋, 宋体, 黑体, Monaco, 'Times New Roman', Arial, sans-serif;
+}
+button{
+    font-family: var(--font);
+}
+
+p {
+    margin: 0;
+}
+
+div {
+    display: block;
+}
+
+input {
+    outline: 0;
+    --vnt-accent-color: var(--pku-dark);
+    border-color: var(--pku-red);
+    border-width: 3px;
+    font-size: 1em;
+    border-style: solid;
+}
+
+/*input:hover {
+    background-color: #fff4d4;
+}
+
+input:focus {
+    background-color: #ffdb7a;
+}
+
+input[type="button"]:hover {
+    background-color: rgb(255, 255, 255) !important;
+    color: var(--pku-red) !important;
+}*/
+
+a {
+    color: blue;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: blue;
+    color: red;
+}
+
+a:active {
+    background-color: transparent;
+}
+
+a:visited {
+    color: red;
+    text-decoration: dashed;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.flexv {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+
+}
+
+.height {
+    height: 100%;
+}
+
+.trans {
+    transition: all 0.8s ease-out;
+}
+
+.fasttrans {
+    transition: all 0.3s cubic-bezier(.17, .84, .44, 1);
+}
+
+.upandaway {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+#main {
+    --pku-red: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    display: block;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    left: 0;
+    font-family: title;
+    color: black;
+    background-blend-mode: lighten;
+    background-color: rgba(255, 255, 255, 0.9);
+    background-size: 50vw;
+}
+
+#head {
+    top: 0;
+    position: relative;
+    width: 100%;
+    height: var(--head-height);
+    background-color: var(--pku-light);
+    background-blend-mode: luminosity;
+    background-size: 50vw;
+    overflow: hidden;
+    z-index: 999;
+    align-content: center;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.title {
+    font-size: var(--head-height);
+    margin-right: 2em;
+    color: white;
+    line-height: 1em;
+}
+
+#foot {
+    position: relative;
+    background-color: var(--pku-red);
+    bottom: 0;
+    color: white;
+    width: auto;
+    height: var(--foot-height);
+    display: block;
+    z-index: 998;
+}
+
+#copyright {
+    font-size: 0.6em;
+    opacity: 0.9;
+}
+
+#copyright span {
+    margin: 0 auto;
+}
+
+#content {
+    width: auto;
+    height: auto;
+    min-height: calc(100vh - var(--foot-height) - var(--head-height));
+    padding: 1em;
+}
+
+.btn {
+    background-color: rgba(0, 0, 0, 0);
+    /*linear-gradient(0deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 100%);*/
+    /*linear-gradient(0deg, rgba(255, 74, 50, 0.8), rgba(255, 0, 0, 0) 70.71%);*/
+    /*background-image:radial-gradient(circle, #00000091 0%, #0000004a 20%,transparent);*/
+    backdrop-filter: blur(5px);
+    min-width: 3em;
+    transition: all 0.2s ease-out;
+    text-align: center;
+    width: calc(100% - 0.4em);
+    height: 100%;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+}
+
+.btn:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    /*linear-gradient(0deg, rgba(255, 116, 97, 0.8), rgba(255, 0, 0, 0) 20.71%);*/
+}
+
+.btn:active {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.render {
+    --pku-light: rgba(255, 255, 255, 0.4);
+    background-color: var(--pku-light);
+    min-height: 1em;
+    min-width: 1em;
+    margin: 0.3em;
+    width: max-content;
+    max-width: 100%;
+    word-wrap: break-word;
+    font-family: var(--render);
+    word-break: break-all;
+    padding: .2em;
+    box-shadow: 0 0 20px #0000002b;
+    transition: box-shadow .5s linear;
+}
+
+.render:hover {
+    box-shadow: 0 0 20px #000000aa;
+    background-color: rgba(100, 100, 100, 0.5);
+}
+
+.answer {
+    font-size: 1em;
+    position: relative;
+}
+
+#vscode {
+    display: block;
+    border: 0;
+    outline: none;
+    position: relative;
+    height: auto;
+    min-height: 10em;
+}
+
+.sidebar {
+    transform: translateX(6em);
+}
+
+.sidebar:hover {
+    transform: translateX(0);
+}
+
+#nagivate a {
+    margin-top: 0.3em;
+}
+
+@keyframes loo {
+    from {
+        background-position-x: 0%;
+    }
+
+    to {
+        background-position-x: 100%;
+    }
+}
+
+.loading {
+    background-image: linear-gradient(-45deg, rgba(255, 0, 0, 0.9) 25%, transparent 25%, transparent 50%, rgba(255, 0, 0, 0.9) 50%, rgba(255, 0, 0, 0.9) 75%, transparent 75%, transparent);
+    background-size: 50px 50px;
+    background-repeat: repeat;
+    animation-name: loo;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+
+progress {
+    background-color: transparent;
+    border: 0;
+}
+
+.disable-select {
+    -moz-user-select: none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
